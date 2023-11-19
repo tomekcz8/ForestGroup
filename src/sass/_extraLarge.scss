@@ -12,15 +12,26 @@
 		}
 	}
 
-    //header
+	//header
 	header {
 		.hero {
 			&__text {
-                
 				align-items: flex-start;
-                padding-left: 10em;
+				padding-left: 10em;
 			}
 		}
 	}
 
+	//nav
+	.wrapper {
+		.nav {
+			&__items {
+				.nav__item {
+					width: 9%;
+					height: 100%;
+					left: 55%;
+				}
+			}
+		}
+	}
 }
