@@ -21,7 +21,6 @@ body {
 	max-width: 1400px;
 }
 
-
 .section-heading {
 	position: relative;
 	margin: 1em;
@@ -35,19 +34,23 @@ body {
 /* NAVIGATION */
 
 .nav {
-	position: relative;
+	position: fixed;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	height: 4em;
+	background-color: #fff;
+	border-bottom: 1px solid black;
+	z-index: 1;
 
 	&__logo {
-		position: absolute;
+		position: relative;
 		left: 5%;
 		font-size: 2.5rem;
 		text-decoration: none;
 		color: rgb(50, 50, 50);
+		z-index: 2;
 
 		.fa-solid {
 			padding: 4px;
@@ -56,24 +59,30 @@ body {
 	}
 
 	&__items {
-		position: absolute;
-		display: none;
-		height: 100%;
-		width: 40%;
-		left: 60%;
+		position: fixed;
+		width: 100%;
+		top: 4em;
+		transform: translateY(-150%);
+		background-color: #fff;
+
+		&--active {
+			transform: translateY(0);
+		}
 
 		.nav__item {
+			position: relative;
 			display: flex;
-			padding: 2em 2.5em;
-			font-size: 1.8rem;
 			justify-content: center;
-			align-items: center;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 1em 0;
+			width: 30%;
+			font-size: 1.7rem;
 			text-decoration: none;
 			color: rgb(50, 50, 50);
 
-			.active {
-				color: #fff;
-				background-color: #000;
+			&:hover {
+				font-weight: bold;
 			}
 		}
 	}
@@ -90,6 +99,7 @@ body {
 	color: rgb(50, 50, 50);
 	border: none;
 	cursor: pointer;
+	z-index: 2;
 }
 
 /* HEADER */
@@ -145,6 +155,7 @@ header {
 	justify-content: center;
 	max-width: 1200px;
 	margin: 0 auto;
+	scroll-margin-top: 4em;
 
 	&__box {
 		display: flex;
@@ -156,7 +167,7 @@ header {
 	&__img {
 		display: block;
 		max-width: 100%;
-		max-height: 200px;
+		max-height: 220px;
 		margin: 0 auto;
 	}
 
@@ -223,17 +234,22 @@ header {
 			h2 {
 				font-size: 1.2em;
 				border: 1px solid white;
-				padding: 1em;
+				padding: 1em 1.5em;
 			}
 		}
 	}
 }
 
 // Offerts
+.offerts {
+	scroll-margin-top: 4em;
+}
+
 .heading p {
 	text-align: center;
 	margin: 0 1em;
 }
+
 .offert {
 	display: flex;
 	justify-content: center;
@@ -251,11 +267,7 @@ header {
 		min-height: 20em;
 		border-radius: 8px;
 		box-shadow: 0 0 5px rgb(148, 144, 144);
-		transition: transform 0.3s;
-
-		// &:hover {
-		// 	transform: scale(1.1);
-		// }
+		overflow: hidden;
 
 		.title {
 			font-size: 1.5em;
@@ -264,19 +276,22 @@ header {
 		}
 
 		span {
+			display: block;
 			font-size: 2em;
 			font-weight: 500;
+			margin: .2em 0;
 		}
 
 		.list {
 			list-style: none;
+			margin-bottom: 1.2em;
 
 			li {
 				padding-bottom: 0.5em;
-				font-size: .9em;
+				font-size: 0.9em;
 
 				i {
-					margin-right: .9em;
+					margin-right: 0.9em;
 					color: rgb(95, 224, 95);
 				}
 
@@ -292,23 +307,24 @@ header {
 
 		button {
 			padding: 0.5em 3.5em;
-			margin-bottom: 1.5em;
-			font-size: .9em;
+			margin-bottom: 2em;
+			font-size: 0.9em;
 			letter-spacing: 2px;
 			background: none;
 			border: none;
+			color: grey;
 			border-radius: 8px;
 			box-shadow: 0 0 5px rgb(148, 144, 144);
 			cursor: pointer;
 		}
 
 		.green {
+			color: #000;
 			background-color: rgb(64, 184, 64);
 			box-shadow: 0 0 5px rgb(64, 184, 64);
 		}
 	}
 }
-
 
 // FOOTER
 .footer {
@@ -375,10 +391,9 @@ header {
 	}
 
 	&__year {
-		margin-right: .2em;
+		margin-right: 0.2em;
 	}
 }
-
-@import 'small.scss';
 @import 'medium.scss';
 @import 'large.scss';
+@import 'extraLarge.scss';

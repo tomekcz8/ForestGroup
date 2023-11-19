@@ -1,0 +1,26 @@
+@media (min-width: 1200px) {
+	//ADVENTURE
+	.adventure {
+		.hero {
+			&__text {
+				h2 {
+					font-size: 3em;
+					border: 1px solid white;
+					padding: 1em 5em;
+				}
+			}
+		}
+	}
+
+    //header
+	header {
+		.hero {
+			&__text {
+                
+				align-items: flex-start;
+                padding-left: 10em;
+			}
+		}
+	}
+
+}

@@ -34,7 +34,7 @@ body {
 
 /* NAVIGATION */
 .nav {
-  position: relative;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,43 +46,61 @@ body {
           align-items: center;
   width: 100%;
   height: 4em;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  z-index: 1;
 }
 .nav__logo {
-  position: absolute;
+  position: relative;
   left: 5%;
   font-size: 2.5rem;
   text-decoration: none;
   color: rgb(50, 50, 50);
+  z-index: 2;
 }
 .nav__logo .fa-solid {
   padding: 4px;
   font-size: 2.5rem;
 }
 .nav__items {
-  position: absolute;
-  display: none;
-  height: 100%;
-  width: 40%;
-  left: 60%;
+  position: fixed;
+  width: 100%;
+  top: 4em;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.nav__items--active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .nav__items .nav__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2em 2.5em;
-  font-size: 1.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1em 0;
+  width: 30%;
+  font-size: 1.7rem;
   text-decoration: none;
   color: rgb(50, 50, 50);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.nav__items .nav__item .active {
-  color: #fff;
-  background-color: #000;
+.nav__items .nav__item:hover {
+  font-weight: bold;
 }
 
 .burger-btn {
@@ -96,6 +114,7 @@ body {
   color: rgb(50, 50, 50);
   border: none;
   cursor: pointer;
+  z-index: 2;
 }
 
 /* HEADER */
@@ -153,6 +172,7 @@ header .hero__text h1 {
           justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+  scroll-margin-top: 4em;
 }
 .about__box {
   display: -webkit-box;
@@ -243,6 +263,10 @@ header .hero__text h1 {
   font-size: 1.2em;
   border: 1px solid white;
   padding: 1em;
+}
+
+.offerts {
+  scroll-margin-top: 4em;
 }
 
 .heading p {
@@ -422,4 +446,67 @@ header .hero__text h1 {
 }
 .footer__year {
   margin-right: 0.2em;
+}
+
+@media (min-width: 992px) {
+  .wrapper .nav {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 6em;
+    top: 0;
+    left: 0;
+  }
+  .wrapper .nav__logo {
+    position: absolute;
+    left: 12%;
+    font-size: 4rem;
+    text-decoration: none;
+  }
+  .wrapper .nav__logo .fa-solid {
+    font-size: 4rem;
+  }
+  .wrapper .nav__items {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    top: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .wrapper .nav__items .nav__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 7%;
+    height: 100%;
+    left: 50%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    -webkit-transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+  }
+  .wrapper .nav__items .nav__item:hover {
+    background-color: #000;
+    color: #fff;
+    font-weight: normal;
+  }
+  .burger-btn {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

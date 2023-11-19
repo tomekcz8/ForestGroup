@@ -1,3 +1,164 @@
-@media(min-width: 992px) {
-    
+@media (min-width: 992px) {
+	.section-heading {
+		font-size: 4rem;
+		margin: 1.5em;
+	}
+	//nav
+	.wrapper {
+		.nav {
+			height: 5em;
+			left: 0;
+		
+
+			&__logo {
+				left: 12%;
+				font-size: 4rem;
+
+				.fa-solid {
+					font-size: 4rem;
+				}
+			}
+
+			&__items {
+				display: flex;
+				height: 5em;
+				top: 0;
+				transform: translateY(0);
+				border-bottom: 1px solid black;
+
+				.nav__item {
+					align-items: center;
+					width: 10%;
+					height: 100%;
+					left: 50%;
+					padding: 1em;
+					font-size: 2rem;
+					transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+
+					&:hover {
+						background-color: #000;
+						color: #fff;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+	.burger-btn {
+		display: none;
+	}
+
+	//header
+	header {
+		.hero {
+			&__img {
+				background-image: url('../img/jungle_1920.jpg');
+			}
+			&__text {
+				p {
+					font-size: 3rem;
+				}
+				h1 {
+					font-size: 4rem;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	/* ABOUT */
+	.about {
+		scroll-margin-top: 5em;
+
+		&__box {
+			margin-bottom: 5em;
+		}
+
+		&__img {
+			max-height: 300px;
+		}
+
+		&__box-text {
+			justify-content: flex-start;
+			align-items: flex-start;
+			max-width: 45%;
+			margin: 0;
+			padding-left: 4em;
+		}
+
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__text {
+			font-size: 1.5rem;
+			margin: 0;
+		}
+	}
+
+	//ADVENTURE
+	.adventure {
+		.hero {
+			&__img {
+				height: 400px;
+				background-image: url('../img/girl_1920.jpg');
+			}
+
+			&__text {
+				h2 {
+					font-size: 2.5em;
+					border: 1px solid white;
+					padding: 1em 3.5em;
+				}
+			}
+		}
+	}
+
+	// Offerts
+	.offerts {
+		scroll-margin-top: 5em;
+	}
+
+	.heading p {
+		font-size: 1.5em;
+	}
+
+	.offert {
+		&__box {
+			min-width: 18em;
+			min-height: 23em;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+
+			.title {
+				font-size: 2em;
+				margin-top: 0.5em;
+			}
+
+			span {
+				font-size: 3em;
+			}
+
+			.list {
+				li {
+					font-size: 1.1em;
+				}
+			}
+
+			button {
+				padding: 0.5em 4em;
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	// FOOTER
+	.footer {
+		&__boxes {
+			display:flex;
+		}
+	}
 }

@@ -1,3 +1,14 @@
-@media(min-width: 768px) {
-    
+@media (min-width: 768px) {
+	//ADVENTURE
+	.adventure {
+		.hero {
+			&__text {
+				h2 {
+					font-size: 2em;
+					border: 1px solid white;
+					padding: 1em 4em;
+				}
+			}
+		}
+	}
 }
