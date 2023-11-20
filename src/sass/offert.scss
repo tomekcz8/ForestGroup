@@ -1,0 +1,67 @@
+//OFFERT SUBPAGE
+
+.offers {
+	&__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		position: relative;
+		padding-top: 5em;
+		
+	}
+	&__option {
+		display: flex;
+        flex-wrap: wrap;
+        max-width:20em;
+        margin-bottom: 4em;
+        box-shadow: 0 0 10px grey;
+        overflow: hidden;
+
+        &-img {
+			width: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+        &-info {
+			padding: 2em;
+		}
+
+        &-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.2rem;
+			font-weight: 400;
+		}
+
+        &-text {
+			margin-bottom: 0.5s;
+			font-size: 1.5rem;
+            font-weight: 200;
+		}
+
+        &-btn {
+			margin-top: 2em;
+			padding: 0.8em;
+			width: 100%;
+            font-size: 1.5rem;
+			color: #000;
+			background-color: rgb(236, 231, 231);;
+			border-radius: 8px;
+			cursor: pointer;
+            transition: background-color .3s;
+
+			&:hover{
+                background-color: rgb(64, 184, 64);
+            }
+		}
+	}
+}
+
+
+@import 'medium.scss';
+@import 'large.scss';
+@import 'extraLarge.scss';

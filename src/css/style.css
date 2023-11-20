@@ -69,10 +69,6 @@ body {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
   background-color: #fff;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .nav__items--active {
   -webkit-transform: translateY(0);
@@ -94,10 +90,6 @@ body {
   font-size: 1.7rem;
   text-decoration: none;
   color: rgb(50, 50, 50);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 .nav__items .nav__item:hover {
   font-weight: bold;
@@ -188,7 +180,7 @@ header .hero__text h1 {
 .about__img {
   display: block;
   max-width: 100%;
-  max-height: 200px;
+  max-height: 220px;
   margin: 0 auto;
 }
 .about__box-text {
@@ -262,7 +254,7 @@ header .hero__text h1 {
 .adventure .hero__text h2 {
   font-size: 1.2em;
   border: 1px solid white;
-  padding: 1em;
+  padding: 1em 1.5em;
 }
 
 .offerts {
@@ -307,10 +299,7 @@ header .hero__text h1 {
   border-radius: 8px;
   -webkit-box-shadow: 0 0 5px rgb(148, 144, 144);
           box-shadow: 0 0 5px rgb(148, 144, 144);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  overflow: hidden;
 }
 .offert__box .title {
   font-size: 1.5em;
@@ -318,11 +307,14 @@ header .hero__text h1 {
   margin-top: 0.5em;
 }
 .offert__box span {
+  display: block;
   font-size: 2em;
   font-weight: 500;
+  margin: 0.2em 0;
 }
 .offert__box .list {
   list-style: none;
+  margin-bottom: 1.2em;
 }
 .offert__box .list li {
   padding-bottom: 0.5em;
@@ -340,17 +332,19 @@ header .hero__text h1 {
 }
 .offert__box button {
   padding: 0.5em 3.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   font-size: 0.9em;
   letter-spacing: 2px;
   background: none;
   border: none;
+  color: grey;
   border-radius: 8px;
   -webkit-box-shadow: 0 0 5px rgb(148, 144, 144);
           box-shadow: 0 0 5px rgb(148, 144, 144);
   cursor: pointer;
 }
 .offert__box .green {
+  color: #000;
   background-color: rgb(64, 184, 64);
   -webkit-box-shadow: 0 0 5px rgb(64, 184, 64);
           box-shadow: 0 0 5px rgb(64, 184, 64);
@@ -448,56 +442,58 @@ header .hero__text h1 {
   margin-right: 0.2em;
 }
 
+.offers__box {
+  position: relative;
+  top: 8em;
+}
+.offers__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .adventure .hero__text h2 {
+    font-size: 2em;
+    border: 1px solid white;
+    padding: 1em 4em;
+  }
+}
 @media (min-width: 992px) {
+  .section-heading {
+    font-size: 4rem;
+    margin: 1.5em;
+  }
   .wrapper .nav {
-    position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 6em;
-    top: 0;
+    height: 5em;
     left: 0;
   }
   .wrapper .nav__logo {
-    position: absolute;
     left: 12%;
     font-size: 4rem;
-    text-decoration: none;
   }
   .wrapper .nav__logo .fa-solid {
     font-size: 4rem;
   }
   .wrapper .nav__items {
-    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
+    height: 5em;
     top: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    border-bottom: 1px solid black;
   }
   .wrapper .nav__items .nav__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 7%;
+    width: 10%;
     height: 100%;
     left: 50%;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    padding: 1em;
     font-size: 2rem;
-    text-decoration: none;
-    color: rgb(50, 50, 50);
     -webkit-transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
     transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
   }
@@ -508,5 +504,102 @@ header .hero__text h1 {
   }
   .burger-btn {
     display: none;
+  }
+  header .hero__img {
+    background-image: url("../img/jungle_1920.jpg");
+  }
+  header .hero__text p {
+    font-size: 3rem;
+  }
+  header .hero__text h1 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  /* ABOUT */
+  .about {
+    scroll-margin-top: 5em;
+  }
+  .about__box {
+    margin-bottom: 5em;
+  }
+  .about__img {
+    max-height: 300px;
+  }
+  .about__box-text {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 45%;
+    margin: 0;
+    padding-left: 4em;
+  }
+  .about__title {
+    font-size: 3rem;
+  }
+  .about__text {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .adventure .hero__img {
+    height: 400px;
+    background-image: url("../img/girl_1920.jpg");
+  }
+  .adventure .hero__text h2 {
+    font-size: 2.5em;
+    border: 1px solid white;
+    padding: 1em 3.5em;
+  }
+  .offerts {
+    scroll-margin-top: 5em;
+  }
+  .heading p {
+    font-size: 1.5em;
+  }
+  .offert__box {
+    min-width: 18em;
+    min-height: 23em;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .offert__box:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .offert__box .title {
+    font-size: 2em;
+    margin-top: 0.5em;
+  }
+  .offert__box span {
+    font-size: 3em;
+  }
+  .offert__box .list li {
+    font-size: 1.1em;
+  }
+  .offert__box button {
+    padding: 0.5em 4em;
+    font-size: 1.2em;
+  }
+  .footer__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .adventure .hero__text h2 {
+    font-size: 3em;
+    border: 1px solid white;
+    padding: 1em 5em;
+  }
+  header .hero__text {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 10em;
   }
 }/*# sourceMappingURL=style.css.map */

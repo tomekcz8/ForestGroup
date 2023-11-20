@@ -4,7 +4,7 @@
 		.hero {
 			&__text {
 				h2 {
-					font-size: 3em;
+					font-size: 5rem;
 					border: 1px solid white;
 					padding: 1em 5em;
 				}
@@ -12,15 +12,33 @@
 		}
 	}
 
-    //header
+	//header
 	header {
 		.hero {
 			&__text {
-                
 				align-items: flex-start;
-                padding-left: 10em;
+				padding-left: 10em;
 			}
 		}
 	}
 
+	//SUBPAGE OFFERT
+	.offers {
+		&__option {
+			max-width: 65em;
+
+			&-heading {
+				font-size: 2.5rem;
+			}
+			&-text {
+				font-size: 1.7rem;
+			}
+		}
+	}
+	//CONTACT
+	.map {
+		&_box {
+			max-width: 40em;
+		}
+	}
 }

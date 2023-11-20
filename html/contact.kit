@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest - najpiękniejsze chwile z naturą</title>
+    <script src="https://kit.fontawesome.com/29c31e7dd2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <link rel="stylesheet" href="dist/css/offert.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <a href="./index.html" class="nav__logo"><i class="fa-solid fa-tree"></i>Forest</a>
+            <div class="nav__items">
+                <a href="./index.html" class="nav__item">Home</a>
+                <a href="./index.html" class="nav__item">O nas</a>
+                <a href="./offert.html" class="nav__item">Oferty</a>
+                <a href="#" class="nav__item">Kontakt</a>
+            </div>
+    </div>
+    </nav>
+
+    <button class="burger-btn">
+        <div class="burger-btn__box">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </button>
+
+    <main>
+
+        <section id="contact" class="contact">
+
+            <h2 class="section-heading">Kontakt</h2>
+
+            <div class="wrapper">
+                <form class="contact__form">
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label">Imię i nazwisko </label>
+                        <input type="text" class="contact__form-input" id="name">
+
+                        <label for="email" class="contact__form-label">Adres e-mail:</label>
+                        <input type="text" class="contact__form-input" id="email">
+                    </div>
+                    <label for="msg" class="contact__form-label">Wiadomość:</label>
+                    <textarea id="msg" class="contact__form-textarea""></textarea>
+					<button type=" submit" class="contact__form-btn">Wyślij</button>
+				</form>
+			</div>
+		</section>
+
+        <section class="map">
+            <div class="wrapper">
+                <div class="map_box">
+                    <h3>Tutaj nas znajdziesz!</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898233927732!2d19.8902692758903!3d50.08819217152534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1700508849422!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+	</main>
+	<footer>
+		<!-- @include 'footer.kit'-->
+	</footer>
+	<script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
