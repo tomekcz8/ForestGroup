@@ -4,9 +4,12 @@
 
 Hi, I'm Tomek and this is my first independent webside.
 
-This project come from online course MMC School.
 
-I hed mockup and some requirements.
 
-In this project I used html, sass an javaScript.
+This project come frome online course MMC School.
+
+I had mockup and some requirements.
+
+In this project I used it html, sass an javaScript.
+
 
