@@ -38,9 +38,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -51,7 +51,7 @@ body {
   z-index: 1;
 }
 .nav__logo {
-  position: relative;
+  position: fixed;
   left: 5%;
   font-size: 2.5rem;
   text-decoration: none;
@@ -101,7 +101,7 @@ body {
   top: 0.2em;
   padding: 0.2em;
   margin-right: 0.5em;
-  font-size: 2em;
+  font-size: 3rem;
   background: none;
   color: rgb(50, 50, 50);
   border: none;
@@ -252,13 +252,22 @@ header .hero__text h1 {
   z-index: 5;
 }
 .adventure .hero__text h2 {
-  font-size: 1.2em;
+  font-size: 2.4rem;
   border: 1px solid white;
   padding: 1em 1.5em;
 }
 
 .offerts {
   scroll-margin-top: 4em;
+}
+
+.link {
+  margin: 1.5em;
+  text-align: center;
+}
+.link a {
+  text-decoration: none;
+  color: gray;
 }
 
 .heading p {
@@ -302,13 +311,13 @@ header .hero__text h1 {
   overflow: hidden;
 }
 .offert__box .title {
-  font-size: 1.5em;
+  font-size: 3rem;
   font-weight: 400;
   margin-top: 0.5em;
 }
 .offert__box span {
   display: block;
-  font-size: 2em;
+  font-size: 3rem;
   font-weight: 500;
   margin: 0.2em 0;
 }
@@ -318,7 +327,7 @@ header .hero__text h1 {
 }
 .offert__box .list li {
   padding-bottom: 0.5em;
-  font-size: 0.9em;
+  font-size: 1.5rem;
 }
 .offert__box .list li i {
   margin-right: 0.9em;
@@ -333,7 +342,7 @@ header .hero__text h1 {
 .offert__box button {
   padding: 0.5em 3.5em;
   margin-bottom: 2em;
-  font-size: 0.9em;
+  font-size: 1.7rem;
   letter-spacing: 2px;
   background: none;
   border: none;
@@ -419,7 +428,7 @@ header .hero__text h1 {
   height: 100%;
   list-style: none;
   color: rgb(50, 50, 50);
-  font-size: 0.8em;
+  font-size: 1.2rem;
 }
 .footer__box .items ul li {
   margin-bottom: 1em;
@@ -442,21 +451,117 @@ header .hero__text h1 {
   margin-right: 0.2em;
 }
 
-.offers__box {
+.contact {
   position: relative;
-  top: 8em;
+  top: 7em;
+  max-width: 60%;
+  padding: 1em;
+  margin: 0 auto;
+  margin-bottom: 15em;
+  background-color: rgb(236, 231, 231);
+  -webkit-box-shadow: 0 0 5px rgb(148, 144, 144);
+          box-shadow: 0 0 5px rgb(148, 144, 144);
+  border-radius: 8px;
+  overflow: hidden;
 }
-.offers__option {
+.contact__form, .contact__form-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact__form-label {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.contact__form-input, .contact__form-textarea {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  outline: none;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.contact__form-input:hover, .contact__form-textarea:hover {
+  -webkit-box-shadow: 0 0 8px gray;
+          box-shadow: 0 0 8px gray;
+}
+.contact__form-textarea {
+  min-height: 150px;
+  max-height: 300px;
+  resize: vertical;
+}
+.contact__form-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1em;
+  width: 100%;
+  max-width: 300px;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  border: 1px solid grey;
+  -webkit-box-shadow: 0 0 2px grey;
+          box-shadow: 0 0 2px grey;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.contact__form-btn:hover {
+  background-color: rgb(64, 184, 64);
+}
+
+.map_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 20em;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+.map_box h3 {
+  margin-bottom: 1.5em;
+  font-weight: normal;
 }
 
 @media (min-width: 768px) {
+  .link {
+    margin: 1.5em;
+    font-size: 2rem;
+    text-align: center;
+  }
   .adventure .hero__text h2 {
-    font-size: 2em;
+    font-size: 3rem;
     border: 1px solid white;
     padding: 1em 4em;
+  }
+  .offers__option {
+    max-width: 35em;
+  }
+  .offers__option-heading {
+    margin-bottom: 0.7em;
+  }
+  .offers__option-text {
+    font-size: 1.6rem;
+  }
+  .map_box {
+    max-width: 25em;
   }
 }
 @media (min-width: 992px) {
@@ -467,6 +572,7 @@ header .hero__text h1 {
   .wrapper .nav {
     height: 5em;
     left: 0;
+    border: none;
   }
   .wrapper .nav__logo {
     left: 12%;
@@ -481,9 +587,9 @@ header .hero__text h1 {
     display: flex;
     height: 5em;
     top: 0;
+    border-bottom: 1px solid black;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    border-bottom: 1px solid black;
   }
   .wrapper .nav__items .nav__item {
     -webkit-box-align: center;
@@ -548,7 +654,7 @@ header .hero__text h1 {
     background-image: url("../img/girl_1920.jpg");
   }
   .adventure .hero__text h2 {
-    font-size: 2.5em;
+    font-size: 4rem;
     border: 1px solid white;
     padding: 1em 3.5em;
   }
@@ -556,7 +662,7 @@ header .hero__text h1 {
     scroll-margin-top: 5em;
   }
   .heading p {
-    font-size: 1.5em;
+    font-size: 2.2rem;
   }
   .offert__box {
     min-width: 18em;
@@ -571,28 +677,42 @@ header .hero__text h1 {
             transform: scale(1.1);
   }
   .offert__box .title {
-    font-size: 2em;
+    font-size: 3rem;
     margin-top: 0.5em;
   }
   .offert__box span {
-    font-size: 3em;
+    font-size: 4.5rem;
   }
   .offert__box .list li {
-    font-size: 1.1em;
+    font-size: 1.8rem;
   }
   .offert__box button {
     padding: 0.5em 4em;
-    font-size: 1.2em;
+    font-size: 2rem;
   }
   .footer__boxes {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+  .offers__option {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 50em;
+  }
+  .offers__option-text {
+    font-size: 1.4rem;
+  }
+  .map_box {
+    max-width: 35em;
+  }
+  .map_box h3 {
+    font-size: 2.5rem;
+  }
 }
 @media (min-width: 1200px) {
   .adventure .hero__text h2 {
-    font-size: 3em;
+    font-size: 5rem;
     border: 1px solid white;
     padding: 1em 5em;
   }
@@ -601,5 +721,17 @@ header .hero__text h1 {
         -ms-flex-align: start;
             align-items: flex-start;
     padding-left: 10em;
+  }
+  .offers__option {
+    max-width: 65em;
+  }
+  .offers__option-heading {
+    font-size: 2.5rem;
+  }
+  .offers__option-text {
+    font-size: 1.7rem;
+  }
+  .map_box {
+    max-width: 40em;
   }
 }/*# sourceMappingURL=style.css.map */
