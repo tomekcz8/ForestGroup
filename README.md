@@ -1,6 +1,8 @@
 # ForestGroup
 
-Hi, this is my first independent webside.
+## About Me
+
+Hi, I'm Tomek and this is my first independent webside.
 
 This project come from online course MMC School.
 
