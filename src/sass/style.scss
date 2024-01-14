@@ -35,71 +35,72 @@ body {
 
 .nav {
 	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
-	height: 4em;
 	background-color: #fff;
 	border-bottom: 1px solid black;
-	z-index: 1;
+	z-index: 2;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4em;
+		margin: 0 1em;
+	}
 
 	&__logo {
-		position: fixed;
-		left: 5%;
-		font-size: 2.5rem;
 		text-decoration: none;
 		color: rgb(50, 50, 50);
-		z-index: 2;
-
-		.fa-solid {
-			padding: 4px;
-			font-size: 2.5rem;
-		}
+		font-size: 3rem;
 	}
 
 	&__items {
-		position: fixed;
-		width: 100%;
+		display: flex;
+		position: absolute;
+		flex-direction: column;
+		align-items: center;
 		top: 4em;
-		transform: translateY(-150%);
+		left: 0;
+		right: 0;
+		padding: 2em 0;
+		gap: 3em;
 		background-color: #fff;
+		border-bottom: 1px solid black;
+		list-style: none;
+		overflow: hidden;
+		transform: translateY(-150%);
+		transition: opacity 0.5s, transform 0.5s;
+		opacity: 0;
+		z-index: -1;
 
 		&--active {
+			opacity: 1;
 			transform: translateY(0);
 		}
+	}
 
-		.nav__item {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			left: 50%;
-			transform: translateX(-50%);
-			padding: 1em 0;
-			width: 30%;
-			font-size: 1.7rem;
-			text-decoration: none;
-			color: rgb(50, 50, 50);
+	&__item {
+		font-size: 1.7rem;
+		color: rgb(50, 50, 50);
+		text-decoration: none;
+		transition: font-weight 0.3s;
 
-			&:hover {
-				font-weight: bold;
-			}
+		&:hover {
+			font-weight: bold;
 		}
 	}
-}
 
-.burger-btn {
-	position: fixed;
-	right: 0;
-	top: 0.2em;
-	padding: 0.2em;
-	margin-right: 0.5em;
-	font-size: 3rem;
-	background: none;
-	color: rgb(50, 50, 50);
-	border: none;
-	cursor: pointer;
-	z-index: 2;
+	.burger {
+		&__btn {
+			display: block;
+			background: none;
+			border: none;
+		}
+		&__icon {
+			cursor: pointer;
+			padding: 1em;
+		}
+	}
 }
 
 /* HEADER */
@@ -234,7 +235,7 @@ header {
 			h2 {
 				font-size: 2.2rem;
 				border: 1px solid white;
-				padding: .4em;
+				padding: 0.4em;
 			}
 		}
 	}
@@ -437,7 +438,7 @@ header {
 		border-radius: 8px;
 		font-size: 1.8rem;
 		outline: none;
-		transition: box-shadow .3s;
+		transition: box-shadow 0.3s;
 
 		&:hover {
 			box-shadow: 0 0 8px gray;
@@ -447,7 +448,7 @@ header {
 	&__form-textarea {
 		min-height: 150px;
 		max-height: 300px;
-		resize:vertical;
+		resize: vertical;
 	}
 
 	&__form-btn {
@@ -462,7 +463,7 @@ header {
 		border: 1px solid grey;
 		box-shadow: 0 0 2px grey;
 		cursor: pointer;
-		transition: background-color .3s;
+		transition: background-color 0.3s;
 
 		&:hover {
 			background-color: rgb(64, 184, 64);
@@ -471,7 +472,7 @@ header {
 }
 
 .map {
-	&_box{
+	&_box {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -486,7 +487,6 @@ header {
 		}
 	}
 }
-
 
 @import 'medium.scss';
 @import 'large.scss';

@@ -4,48 +4,10 @@
 		margin: 1.5em;
 	}
 	//nav
-	.wrapper {
 		.nav {
-			height: 5em;
-			left: 0;
-			border: none;
 
-
-			&__logo {
-				left: 12%;
-				font-size: 4rem;
-
-				.fa-solid {
-					font-size: 4rem;
-				}
-			}
-
-			&__items {
-				display: flex;
-				height: 5em;
-				top: 0;
-				border-bottom: 1px solid black;
-				transform: translateY(0);
-		
-
-				.nav__item {
-					align-items: center;
-					width: 10%;
-					height: 100%;
-					left: 50%;
-					padding: 1em;
-					font-size: 2rem;
-					transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
-
-					&:hover {
-						background-color: #000;
-						color: #fff;
-						font-weight: normal;
-					}
-				}
-			}
 		}
-	}
+	
 	.burger-btn {
 		display: none;
 	}

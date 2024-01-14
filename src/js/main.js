@@ -1,4 +1,4 @@
-const burgerBtn = document.querySelector('.burger-btn')
+const burgerBtn = document.querySelector('.burger__btn')
 const navMenu = document.querySelector('.nav__items')
 const allNavItems = document.querySelectorAll('.nav__item')
 
@@ -9,8 +9,10 @@ const handelMenu = () => {
 	allNavItems.forEach(item => {
 		item.addEventListener('click', () => {
 			navMenu.classList.remove('nav__items--active')
+
 		})
 	})
+	
 }
 
 //footer year

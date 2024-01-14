@@ -230,6 +230,9 @@
   .offers__option-text {
     font-size: 1.4rem;
   }
+  .offers__option-img {
+    max-width: 40%;
+  }
   .map_box {
     max-width: 35em;
   }
@@ -250,13 +253,20 @@
     padding-left: 10em;
   }
   .offers__option {
-    max-width: 65em;
+    max-width: 70em;
+    margin: 2em 3em;
+  }
+  .offers__option-img {
+    max-width: 40%;
   }
   .offers__option-heading {
     font-size: 2.5rem;
   }
   .offers__option-text {
     font-size: 1.7rem;
+  }
+  .offers__option-info {
+    margin-left: 1em;
   }
   .map_box {
     max-width: 40em;
