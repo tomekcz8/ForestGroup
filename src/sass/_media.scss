@@ -1,16 +1,46 @@
-@media (min-width: 992px) {
-	.section-heading {
+@mixin medium {
+    .nav {
+		&__wrapper {
+			justify-content: space-around;
+			height: 5em;
+		}
+		&__items {
+			position: relative;
+			flex-direction: row;
+			top: 0;
+			padding: 0;
+			gap: 0;
+			border: none;
+			transform: none;
+			opacity: 1;
+			height: 100%;
+			
+		}
+
+		&__item {
+			padding: 2.5em;
+			transition: color .3s, background-color .3s;
+			
+			&:hover {
+				color: #fff;
+				background-color: black;
+			}
+		}
+
+		.burger {
+			&__btn {
+				display: none;
+			}
+		}
+	}
+}
+
+@mixin large {
+    .section-heading {
 		font-size: 4rem;
 		margin: 1.5em;
 	}
 	//nav
-		.nav {
-
-		}
-	
-	.burger-btn {
-		display: none;
-	}
 
 	//header
 	header {
@@ -148,6 +178,61 @@
 			h3 {
 				font-size: 2.5rem;
 			}
+		}
+	}
+}
+
+@mixin extraLarge {
+    //ADVENTURE
+	.adventure {
+		.hero {
+			&__text {
+				h2 {
+					font-size: 5rem;
+					border: 1px solid white;
+					padding: 1em 5em;
+				}
+			}
+		}
+	}
+
+	//header
+	header {
+		.hero {
+			&__text {
+				align-items: flex-start;
+				padding-left: 10em;
+			}
+		}
+	}
+
+	//SUBPAGE OFFERT
+	.offers {
+		&__option {
+			max-width: 70em;
+			
+			margin: 2em 3em;
+
+			&-img {
+				max-width: 40%;
+			}
+
+			&-heading {
+				font-size: 2.5rem;
+			}
+			&-text {
+				font-size: 1.7rem;
+			}
+			&-info {
+				margin-left: 1em;
+			}
+
+		}
+	}
+	//CONTACT
+	.map {
+		&_box {
+			max-width: 40em;
 		}
 	}
 }

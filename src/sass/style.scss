@@ -1,6 +1,6 @@
-*,
-*::before,
-*::after {
+@use './media' as * ;
+
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -23,7 +23,6 @@ body {
 
 .section-heading {
 	position: relative;
-	margin: 1em;
 	font-size: 3rem;
 	font-weight: 200;
 	text-transform: uppercase;
@@ -56,10 +55,10 @@ body {
 
 	&__items {
 		display: flex;
-		position: absolute;
+		position: fixed;
 		flex-direction: column;
 		align-items: center;
-		top: 4em;
+		top: -28em;
 		left: 0;
 		right: 0;
 		padding: 2em 0;
@@ -67,14 +66,14 @@ body {
 		background-color: #fff;
 		border-bottom: 1px solid black;
 		list-style: none;
-		overflow: hidden;
 		transform: translateY(-150%);
-		transition: opacity 0.5s, transform 0.5s;
+		transition: opacity 0.3s, top 0.5s;
 		opacity: 0;
-		z-index: -1;
+		overflow: hidden;
 
 		&--active {
 			opacity: 1;
+			top: 4em;
 			transform: translateY(0);
 		}
 	}
@@ -110,7 +109,8 @@ header {
 		&__img {
 			position: relative;
 			width: 100%;
-			height: 32em;
+			top: 4em;
+			height: 30em;
 			background-image: url('../img/jungle_640.jpg');
 			background-position: center;
 			background-size: cover;
@@ -154,21 +154,20 @@ header {
 .about {
 	display: flex;
 	justify-content: center;
-	max-width: 1200px;
-	margin: 0 auto;
 	scroll-margin-top: 4em;
+	margin-top: 7em;
 
 	&__box {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin: 1em 0;
+		margin: 2em 0;
 	}
 
 	&__img {
 		display: block;
 		max-width: 100%;
-		max-height: 220px;
+		max-height: 12em;
 		margin: 0 auto;
 	}
 
@@ -178,8 +177,8 @@ header {
 		justify-content: center;
 		align-items: center;
 		max-width: 100%;
-		margin: 2em;
-		font-weight: lighter;
+		margin: 1em;
+		font-weight: normal;
 		color: #000;
 	}
 
@@ -234,7 +233,7 @@ header {
 
 			h2 {
 				font-size: 2.2rem;
-				border: 1px solid white;
+				// border: 1px solid white;
 				padding: 0.4em;
 			}
 		}
@@ -244,21 +243,12 @@ header {
 // Offerts
 .offerts {
 	scroll-margin-top: 4em;
-}
-
-.link {
-	margin: 1.5em;
-	text-align: center;
-
-	a {
-		text-decoration: none;
-		color: gray;
-	}
+	margin-top: 4em;
 }
 
 .heading p {
 	text-align: center;
-	margin: 0 1em;
+	font-size: 1.5rem;
 }
 
 .offert {
@@ -266,7 +256,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-top: 2.5em;
+	margin-top: 2em;
 
 	&__box {
 		display: flex;
@@ -286,16 +276,14 @@ header {
 			margin-top: 0.5em;
 		}
 
-		span {
-			display: block;
-			font-size: 3rem;
-			font-weight: 500;
-			margin: 0.2em 0;
+		.coast {
+			font-size: 2.5rem;
+			font-weight: 700;
 		}
 
 		.list {
 			list-style: none;
-			margin-bottom: 1.2em;
+			margin: 1em 0;
 
 			li {
 				padding-bottom: 0.5em;
@@ -333,6 +321,27 @@ header {
 			color: #000;
 			background-color: rgb(64, 184, 64);
 			box-shadow: 0 0 5px rgb(64, 184, 64);
+		}
+	}
+}
+
+.link {
+	margin: 1.5em;
+	text-align: center;
+
+	a {
+		display: inline-block;
+		padding: 0.5em 0.5em;
+		margin: 1em;
+		border: 1px solid rgb(64, 184, 64);
+		background-color: rgb(64, 184, 64);
+		// font-size: 1.5rem;
+		text-decoration: none;
+		color: #000;
+		transition: color 0.3s;
+
+		&:hover {
+			color: #fff;
 		}
 	}
 }
@@ -488,6 +497,16 @@ header {
 	}
 }
 
-@import 'medium.scss';
-@import 'large.scss';
-@import 'extraLarge.scss';
+@media (min-width: 768px) {
+	@include medium;
+}
+
+@media (min-width: 992px) {
+	@include large;
+}
+
+@media (min-width: 1200px) {
+	@include extraLarge;
+}
+
+
