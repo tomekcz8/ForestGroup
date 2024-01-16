@@ -1,4 +1,4 @@
-@use './media' as * ;
+@use './media' as *;
 
 * {
 	box-sizing: border-box;
@@ -67,9 +67,10 @@ body {
 		border-bottom: 1px solid black;
 		list-style: none;
 		transform: translateY(-150%);
-		transition:opacity 0.3s, top .5s;
+		transition: opacity 0.3s, top 0.5s;
 		opacity: 0;
 		overflow: hidden;
+		z-index: -1;
 
 		&--active {
 			opacity: 1;
@@ -155,7 +156,11 @@ header {
 	display: flex;
 	justify-content: center;
 	scroll-margin-top: 4em;
-	margin-top: 7em;
+	margin-top: 4em;
+
+	.section-heading {
+		margin-top: 2em;
+	}
 
 	&__box {
 		display: flex;
@@ -199,7 +204,7 @@ header {
 //ADVENTURE
 
 .adventure {
-	width: 100%;
+	
 	.hero {
 		&__img {
 			position: relative;
@@ -233,7 +238,7 @@ header {
 			h2 {
 				font-size: 2.2rem;
 				// border: 1px solid white;
-				padding: 0.4em;
+				padding: 1em;
 			}
 		}
 	}
@@ -248,6 +253,7 @@ header {
 .heading p {
 	text-align: center;
 	font-size: 1.5rem;
+	margin-top: 1em;
 }
 
 .offert {
@@ -331,10 +337,9 @@ header {
 	a {
 		display: inline-block;
 		padding: 0.5em 0.5em;
-		margin: 1em;
+		margin-left: .4em;
 		border: 1px solid rgb(64, 184, 64);
 		background-color: rgb(64, 184, 64);
-		// font-size: 1.5rem;
 		text-decoration: none;
 		color: #000;
 		transition: color 0.3s;
@@ -378,7 +383,7 @@ header {
 			margin: 1.5em;
 			height: 100%;
 
-			h3 {
+			p {
 				color: #000;
 				font-weight: 600;
 				margin-bottom: 1em;
@@ -389,12 +394,17 @@ header {
 				align-items: flex-start;
 				justify-content: flex-start;
 				height: 100%;
-				list-style: none;
 				color: rgb(50, 50, 50);
 				font-size: 1.2rem;
-
+				
 				li {
 					margin-bottom: 1em;
+					list-style: none;
+					
+					a {
+						color: rgb(50, 50, 50);
+						text-decoration: none;
+					}
 				}
 			}
 		}
@@ -416,18 +426,18 @@ header {
 
 // CONTACT
 .contact {
-	position: relative;
-	top: 7em;
-	max-width: 60%;
-	padding: 1em;
-	margin: 0 auto;
-	margin-bottom: 15em;
-	background-color: rgb(236, 231, 231);
-	box-shadow: 0 0 5px rgb(148, 144, 144);
-	border-radius: 8px;
-	overflow: hidden;
 
-	&__form,
+	&__form {
+		position: relative;
+		top: 4em;
+		width: 30em;
+		padding: 1em;
+		margin-bottom: 15em;
+		background-color: rgb(236, 231, 231);
+		box-shadow: 0 0 5px rgb(148, 144, 144);
+		border-radius: 8px;
+		overflow: hidden;
+	}
 	&__form-top {
 		display: flex;
 		flex-direction: column;
@@ -512,4 +522,6 @@ header {
 	@include extraLarge;
 }
 
-
+@media (min-width: 1600px) {
+	@include min_1600;
+}

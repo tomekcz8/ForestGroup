@@ -15,6 +15,7 @@
 			opacity: 1;
 			height: 100%;
 			transition: opacity 0s;
+			z-index: 1;
 		}
 
 		&__item {
@@ -35,9 +36,18 @@
 	}
 }
 
-@mixin border {
-	.adventure{
+.offert {
+	&__box {
+		transition: transform 0.3s;
 
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+@mixin border {
+	.adventure {
 		.hero {
 			&__text {
 				h2 {
@@ -53,9 +63,8 @@
 @mixin large {
 	.section-heading {
 		font-size: 4rem;
-		margin: 1.5em;
+		margin-top: 2em;
 	}
-	//nav
 
 	//header
 	header {
@@ -164,6 +173,10 @@
 		}
 	}
 
+	.link {
+		font-size: 2rem;
+	}
+
 	// FOOTER
 	.footer {
 		&__boxes {
@@ -221,6 +234,14 @@
 		}
 	}
 
+		/* ABOUT */
+		.about {
+		
+			&__text {
+				font-size: 1.7rem;
+			}
+		}
+
 	//SUBPAGE OFFERT
 	.offers {
 		&__option {
@@ -247,6 +268,23 @@
 	.map {
 		&_box {
 			max-width: 40em;
+		}
+	}
+}
+
+@mixin min_1600 {
+	//NAV
+	.nav {
+		&__logo {
+			font-size: 5rem;
+
+			&-img {
+				width: 0.8em;
+			}
+		}
+
+		&__item {
+			font-size: 2.5rem;
 		}
 	}
 }
